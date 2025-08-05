@@ -1,46 +1,35 @@
-// src/components/Hero.jsx
 import React from 'react';
+import { Typewriter } from 'react-simple-typewriter';
+import './Hero.css';
+import ParticlesBackground from './ParticlesBackground';
 
-export default function Hero() {
+function Hero() {
   return (
-    <section style={styles.container}>
-      <img src="/profile.jpg" alt="Profile" style={styles.image} />
-      <h1 style={styles.name}>Samuel R. Hawthorne</h1>
-      <h2 style={styles.title}>Front-End Developer</h2>
-      <p style={styles.bio}>
-        I’m a passionate self-taught web developer who enjoys building fast, modern UIs. I specialize in React and have built tools like a calorie tracker and a job tracker to solve real-world problems.
+    <div className="hero-section">
+      <ParticlesBackground />
+      <h1 className="hero-name">
+        Samuel <span className="hero-accent">Hawthorne</span>
+      </h1>
+
+      <h2 className="hero-title">
+        <Typewriter
+          words={['Web Developer', 'Frontend Engineer', 'React Enthusiast']}
+          loop={0} // infinite loop
+          cursor
+          cursorStyle="|"
+          typeSpeed={70}
+          deleteSpeed={50}
+          delaySpeed={2000}
+        />
+      </h2>
+
+      <p className="hero-bio">
+        I build modern, responsive websites with React. Passionate about clean UI and smooth UX.
       </p>
-    </section>
+
+      <a href="#contact" className="hero-button">Let's Work Together</a>
+    </div>
   );
 }
 
-const styles = {
-  container: {
-    textAlign: 'center',
-    padding: '4rem 1rem',
-    maxWidth: '800px',
-    margin: '0 auto',
-  },
-  image: {
-    borderRadius: '50%',
-    width: '150px',
-    height: '150px',
-    objectFit: 'cover',
-    marginBottom: '1rem',
-  },
-  name: {
-    fontSize: '2rem',
-    fontWeight: 'bold',
-    margin: '0.5rem 0',
-  },
-  title: {
-    fontSize: '1.25rem',
-    color: '#666',
-    margin: '0.5rem 0',
-  },
-  bio: {
-    fontSize: '1rem',
-    lineHeight: '1.5',
-    color: '#333',
-  },
-};
+export default Hero;

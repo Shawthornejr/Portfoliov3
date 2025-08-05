@@ -1,0 +1,118 @@
+.about-container {
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom right, #1a1a1a, #2c002e);
+  color: #fff;
+}
+
+.about-inner {
+  width: 100%;
+  max-width: 1100px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  padding: 40px 30px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+  backdrop-filter: blur(10px);
+}
+
+.about-image {
+  flex: 1 1 300px;
+  max-width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.about-content {
+  flex: 2 1 500px;
+}
+
+.about-heading {
+  font-size: 2.5rem;
+  margin-bottom: 24px;
+  border-left: 6px solid #ff4081;
+  padding-left: 14px;
+  font-weight: bold;
+  color: #ffb6d5;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+/* Scroll Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Education Section */
+.education-section {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 2px solid #ff4081;
+  color: #ccc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.education-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: #ff4081;
+  font-weight: 700;
+}
+
+.education-section p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-inner {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .about-heading {
+    font-size: 2rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .education-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .education-section p {
+    font-size: 1rem;
+  }
+}

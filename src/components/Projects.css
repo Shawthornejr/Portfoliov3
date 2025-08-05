@@ -1,0 +1,139 @@
+.projects-container {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.projects-heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #ff4081; 
+
+/* Projects grid */
+.projects-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+/* Individual card with image + details side by side */
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Hover effect */
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 30px rgba(255, 64, 129, 0.6);
+}
+
+/* Image container */
+.project-image {
+  flex: 1 1 220px;
+  max-width: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Text/details container */
+.project-details {
+  flex: 2 1 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: #ff8fcf; 
+}
+
+.project-card p {
+  flex-grow: 1;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ddd;
+  margin-bottom: 24px;
+}
+
+/* Links container */
+.project-links {
+  display: flex;
+  gap: 16px;
+}
+
+/* Link buttons */
+.project-links a {
+  background-color: #ff4081;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  box-shadow: 0 3px 10px rgba(255, 64, 129, 0.5);
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+  text-align: center;
+  min-width: 100px;
+}
+
+/* Hover on links */
+.project-links a:hover {
+  background-color: #e73370;
+  box-shadow: 0 6px 18px rgba(231, 51, 112, 0.7);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+  }
+  .project-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .project-details {
+    flex: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-heading {
+    font-size: 2rem;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-links {
+    flex-direction: column;
+  }
+
+  .project-links a {
+    min-width: auto;
+    padding: 12px;
+  }
+}

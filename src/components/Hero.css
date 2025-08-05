@@ -1,0 +1,152 @@
+/* src/components/Hero.css */
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  background-color: #111; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+/* Particles canvas */
+#tsparticles {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0;
+}
+
+/* === HERO TEXT STYLES === */
+.hero-name {
+  font-size: 5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.5);
+  animation: fadeInUp 1s ease-out forwards;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-accent {
+  color: #00ffff;
+  text-shadow: 0 0 5px #0ff, 0 0 15px #0ff;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #bbbbbb;
+  letter-spacing: 1px;
+  animation: fadeInUp 1.5s ease-out forwards;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-bio {
+  font-size: 1.2rem;
+  color: #cccccc;
+  max-width: 600px;
+  line-height: 1.6;
+  animation: fadeInUp 2s ease-out forwards;
+  position: relative;
+  z-index: 2;
+}
+
+/* HERO BUTTON */
+.hero-button {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: #111;
+  background-color: #00ffff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #0ff;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+@media (max-width: 1024px) {
+  .hero-name {
+    font-size: 4rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-bio {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-name {
+    font-size: 3rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-bio {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .hero-button {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-name {
+    font-size: 2.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.2rem;
+  }
+
+  .hero-bio {
+    font-size: 0.9rem;
+  }
+}
+
+/* ANIMATION */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
